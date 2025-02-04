@@ -7,6 +7,9 @@
 # BlueJ files
 *.ctxt
 
+# Intellij files
+.idea
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
@@ -23,5 +26,5 @@
 hs_err_pid*
 replay_pid*
 
-#personal files
+# personal files
 AoC ID
