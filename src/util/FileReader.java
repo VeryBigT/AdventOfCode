@@ -3,10 +3,11 @@ package util;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class FileReader {
+public abstract class FileReader {
     public static List<String> readFile(String filename) {
         File file = new File(filename);
         ArrayList<String> lines = new ArrayList<>();
@@ -17,6 +18,18 @@ public class FileReader {
             e.printStackTrace();
         }
         return lines;
+    }
+
+    public static List<List<String>> readFile(String filename, String seperator) {
+        File file = new File(filename);
+        List<List<String>> result = new ArrayList<>();
+        try (Scanner scanner = new Scanner(file)) {
+            while(scanner.hasNextLine())
+                result.add(Arrays.asList((scanner.nextLine().split(seperator))));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 
     public static char[][] readFileAsCharArray(String filename) {
