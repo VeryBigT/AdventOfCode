@@ -10,7 +10,7 @@ import java.util.stream.LongStream;
 public class IdFinder {
     public static void main(String[] args) {
         long result = 0;
-        List<Range> ranges = FileReader.readFile("src/year2025/day2/Input.txt", ",").get(0).stream()
+        List<Range> ranges = FileReader.readFile("src/year2025/day2/input.txt", ",").get(0).stream()
                 .map(str -> {
                     String[] split = str.split("-");
                     return new Range(Long.parseLong(split[0]), Long.parseLong(split[1]));

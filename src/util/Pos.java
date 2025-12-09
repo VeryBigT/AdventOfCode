@@ -22,4 +22,10 @@ public record Pos(int y, int x) {
     public Pos[] neighbors() {
         return new Pos[]{up(), down(), left(), right()};
     }
+
+    public Pos[] allNeighbors() {
+        return new Pos[]{up(), down(), left(), right(),
+                new Pos(y-1, x-1), new Pos(y+1, x+1),
+                new Pos(y-1, x+1), new Pos(y+1, x-1)};
+    }
 }
