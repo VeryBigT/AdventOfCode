@@ -1,6 +1,6 @@
 package year2024.day15.part1;
 
-import util.FileReader;
+import util.io.FileReader;
 import util.Pos;
 
 import java.util.ArrayList;

@@ -1,12 +1,14 @@
 package year2023.day8.part1;
 
+import util.io.FileReader;
+
 import java.util.*;
 
 public class PathFinder {
     private static record Node(String left, String right) {}
 
     public static void main(String[] args) {
-        List<String> input = util.FileReader.readFile("src/year2023/day8/input.txt");
+        List<String> input = FileReader.readFile("src/year2023/day8/input.txt");
         String instructions = input.get(0);
         Map<String,Node> map = new HashMap<>();
         for(int i = 2; i < input.size(); ++i) {

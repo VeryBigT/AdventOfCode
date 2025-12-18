@@ -2,6 +2,7 @@ package year2023.day5.part2;
 
 import util.Range;
 import util.StringUtil;
+import util.io.FileReader;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -11,7 +12,7 @@ import java.util.stream.IntStream;
 
 public class LocationFinderFast {
     public static void main(String[] args) {
-        List<String> input = util.FileReader.readFile("src/year2023/day5/input.txt");
+        List<String> input = FileReader.readFile("src/year2023/day5/input.txt");
         List<Long> seeds = StringUtil.stringToLongList(input.get(0).split(":")[1]);
         RangeMap2 seedToSoil;
         {

@@ -1,7 +1,7 @@
 package year2024.day11.part2;
 
-import util.BigCountMap;
-import util.FileReader;
+import util.collection.BigCountMap;
+import util.io.FileReader;
 import util.StringUtil;
 
 import java.util.List;

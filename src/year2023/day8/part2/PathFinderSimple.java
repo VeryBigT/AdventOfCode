@@ -1,11 +1,13 @@
 package year2023.day8.part2;
 
+import util.io.FileReader;
+
 import java.util.*;
 import java.util.stream.IntStream;
 
 public class PathFinderSimple {
     public static void main(String[] args) {
-        List<String> input = util.FileReader.readFile("src/year2023/day8/input.txt");
+        List<String> input = FileReader.readFile("src/year2023/day8/input.txt");
         Boolean[] instructions = input.get(0).chars().mapToObj(c -> c == 'L').toArray(Boolean[]::new);
         input = input.subList(2, input.size());
         input.sort((n1, n2) -> {

@@ -1,10 +1,12 @@
 package year2025.day8.part1;
 
-import util.FileReader;
-import util.Pair;
+import util.io.FileReader;
+import util.collection.Pair;
 import util.Pos3D;
 
 import java.util.*;
+
+import static util.collection.Collections.*;
 
 public class Connections {
     public static void main(String[] args) {
@@ -25,40 +27,21 @@ public class Connections {
                 .limit(1000)
                 .map(Pair::left)
                 .forEach(pair -> {
-                    Set<Integer> set = new HashSet<>();
-                    set.add(pair.left());
-                    set.add(pair.right());
+                    Set<Integer> set = setOf(pair.left(), pair.right());
                     for(Set<Integer> circuit: circuits) {
-                        if(set.stream().anyMatch(circuit::contains)) {
+                        if(containsAny(set, circuit)) {
                             circuit.addAll(set);
                             return;
                         }
                     }
                     circuits.add(set);
                 });
-        boolean overlap = true;
-        while (overlap) {
-            overlap = false;
-            for (Set<Integer> circuit1: circuits) {
-                for (Set<Integer> circuit2: circuits) {
-                    if (circuit1.equals(circuit2))
-                        continue;
-                    if (circuit1.stream().anyMatch(circuit2::contains)) {
-                        overlap = true;
-                        circuit1.addAll(circuit2);
-                        circuits.remove(circuit2);
-                        break;
-                    }
-                }
-                if (overlap)
-                    break;
-            }
-        }
+        reduce(circuits);
         int result = circuits.stream()
                 .sorted((set1, set2) -> set2.size() - set1.size())
                 .limit(3)
                 .mapToInt(Set::size)
                 .reduce(1, (a, b) -> a * b);
-        System.out.println(result);
+        System.out.println(result); // 153328
     }
 }

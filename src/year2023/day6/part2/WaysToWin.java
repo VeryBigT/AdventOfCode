@@ -1,12 +1,12 @@
 package year2023.day6.part2;
 
+import util.io.FileReader;
+
 import java.util.List;
-import java.util.stream.IntStream;
-import java.util.stream.LongStream;
 
 public class WaysToWin {
     public static void main(String[] args) {
-        List<String> input = util.FileReader.readFile("src/year2023/day6/input.txt");
+        List<String> input = FileReader.readFile("src/year2023/day6/input.txt");
         long time = Long.parseLong(
                 input.get(0).split(":")[1].replaceAll("\\s+", ""));
         long record = Long.parseLong(

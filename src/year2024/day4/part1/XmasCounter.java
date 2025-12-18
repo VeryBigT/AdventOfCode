@@ -1,6 +1,6 @@
 package year2024.day4.part1;
 
-import util.FileReader;
+import util.io.FileReader;
 
 public class XmasCounter {
     public static void main(String[] args) {

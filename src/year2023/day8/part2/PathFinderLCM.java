@@ -1,15 +1,14 @@
 package year2023.day8.part2;
 
-import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.Arrays;
+import util.io.FileReader;
+
 import java.util.List;
 import java.util.stream.IntStream;
 
 public class PathFinderLCM {
 
     public static void main(String[] args) {
-        List<String> input = util.FileReader.readFile("src/year2023/day8/input.txt");
+        List<String> input = FileReader.readFile("src/year2023/day8/input.txt");
         Boolean[] instructions = input.get(0).chars()
                 .mapToObj(c -> c == 'L')
                 .toArray(Boolean[]::new);

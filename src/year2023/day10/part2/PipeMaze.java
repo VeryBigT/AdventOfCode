@@ -2,6 +2,7 @@ package year2023.day10.part2;
 
 import util.Pos;
 import util.StringUtil;
+import util.io.FileReader;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -10,7 +11,7 @@ import java.util.stream.IntStream;
 public class PipeMaze {
 
     public static void main(String[] args) throws InterruptedException {
-        char[][] maze = util.FileReader
+        char[][] maze = FileReader
                 .readFileAsCharArray("src/year2023/day10/input.txt");
 
         long startTime = System.currentTimeMillis();

@@ -1,12 +1,14 @@
 package year2023.day10.part1;
 
+import util.io.FileReader;
+
 import java.util.*;
 
 public class PipeMaze {
     private record Pos(int y, int x) {}
 
     public static void main(String[] args) throws InterruptedException {
-        char[][] maze = util.FileReader
+        char[][] maze = FileReader
                 .readFileAsCharArray("src/year2023/day10/input.txt");
         Pos startPosition = findStart(maze);
         Set<Pos> visited = new HashSet<>();

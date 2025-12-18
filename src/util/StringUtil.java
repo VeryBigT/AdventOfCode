@@ -25,20 +25,16 @@ public class StringUtil {
                 .collect(Collectors.toList());
     }
 
-    public static int[] stringToIntArray(String str) {
-        return Arrays.stream(str.split("\\s+"))
-                .filter(s -> s.length() != 0)
-                .map(Integer::parseInt)
-                .mapToInt(i -> i)
-                .toArray();
-    }
-
     public static int[] stringToIntArray(String str, String split) {
         return Arrays.stream(str.split(split))
                 .filter(s -> s.length() != 0)
                 .map(Integer::parseInt)
                 .mapToInt(i -> i)
                 .toArray();
+    }
+
+    public static int[] stringToIntArray(String str) {
+        return stringToIntArray(str, "\\s+");
     }
 
     public static List<Long> stringToLongList(String str) {

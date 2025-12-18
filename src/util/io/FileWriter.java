@@ -1,4 +1,4 @@
-package util;
+package util.io;
 
 import java.io.IOException;
 import java.util.Arrays;

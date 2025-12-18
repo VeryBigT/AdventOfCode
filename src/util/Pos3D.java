@@ -1,6 +1,6 @@
 package util;
 
-public record Pos3D(int y, int x, int z) {
+public record Pos3D(int x, int y, int z) {
     public Pos3D (int... coords) {
         this(coords[0], coords[1], coords[2]);
     }

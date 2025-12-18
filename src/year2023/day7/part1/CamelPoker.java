@@ -1,12 +1,14 @@
 package year2023.day7.part1;
 
+import util.io.FileReader;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class CamelPoker {
     public static void main(String[] args) {
-        List<String> input = util.FileReader.readFile("src/year2023/day7/input.txt");
+        List<String> input = FileReader.readFile("src/year2023/day7/input.txt");
         List<Hand> hands = new ArrayList<>();
         for(String line : input) {
             String[] data = line.split(" ");

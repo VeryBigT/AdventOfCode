@@ -1,6 +1,6 @@
 package year2024.day6.part2;
 
-import util.FileReader;
+import util.io.FileReader;
 
 import java.util.*;
 import java.util.stream.Collectors;

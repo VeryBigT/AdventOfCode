@@ -1,7 +1,7 @@
 package year2024.day8.part1;
 
-import util.FileReader;
-import util.ListMap;
+import util.io.FileReader;
+import util.collection.ListMap;
 import util.Pos;
 
 import java.util.*;

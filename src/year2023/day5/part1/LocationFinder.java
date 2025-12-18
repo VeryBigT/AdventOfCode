@@ -1,13 +1,14 @@
 package year2023.day5.part1;
 
 import util.StringUtil;
+import util.io.FileReader;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class LocationFinder {
     public static void main(String[] args) {
-        List<String> input = util.FileReader.readFile("src/year2023/day5/input.txt");
+        List<String> input = FileReader.readFile("src/year2023/day5/input.txt");
         List<Long> seeds = StringUtil.stringToLongList(input.get(0).split(":")[1]);
         RangeMap seedToSoil;
         {

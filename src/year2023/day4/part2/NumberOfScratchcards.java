@@ -1,6 +1,6 @@
 package year2023.day4.part2;
 
-import util.FileReader;
+import util.io.FileReader;
 import year2023.day4.part1.WinningNumbers;
 
 import java.util.*;

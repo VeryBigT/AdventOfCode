@@ -1,10 +1,12 @@
 package year2023.day1.part1;
 
+import util.io.FileReader;
+
 import java.util.List;
 
 public class Calibrator {
     public static void main(String[] args) {
-        List<String> input = util.FileReader.readFile("src/year2023/day1/input.txt");
+        List<String> input = FileReader.readFile("src/year2023/day1/input.txt");
         int sum = 0;
         for(String line : input) {
             sum += firstDigit(line) * 10 + lastDigit(line);

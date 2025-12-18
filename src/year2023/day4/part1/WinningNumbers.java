@@ -1,6 +1,6 @@
 package year2023.day4.part1;
 
-import util.FileReader;
+import util.io.FileReader;
 
 import java.util.Arrays;
 import java.util.Collections;

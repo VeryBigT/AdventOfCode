@@ -1,7 +1,7 @@
 package year2025.day7.part1;
 
-import util.FileReader;
-import util.FileWriter;
+import util.io.FileReader;
+import util.io.FileWriter;
 
 public class XmasTree {
     public static void main(String[] args) {

@@ -1,6 +1,7 @@
 package year2023.day2.part1;
 
-import java.util.Arrays;
+import util.io.FileReader;
+
 import java.util.List;
 
 public class DiceGame {
@@ -8,7 +9,7 @@ public class DiceGame {
     public static int[] question = {12, 13, 14};
 
     public static void main(String[] args) {
-        List<String> input = util.FileReader.readFile("src/year2023/day2/input.txt");
+        List<String> input = FileReader.readFile("src/year2023/day2/input.txt");
         int result = 0;
         for(int i = 0; i < input.size(); ++i) {
             int[] maxDices = getMaxDices(input.get(i));

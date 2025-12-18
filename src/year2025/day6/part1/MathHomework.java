@@ -1,7 +1,7 @@
 package year2025.day6.part1;
 
-import util.FileReader;
-import util.ListMap;
+import util.io.FileReader;
+import util.collection.ListMap;
 
 import java.util.ArrayList;
 import java.util.Arrays;

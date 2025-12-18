@@ -1,6 +1,6 @@
 package year2025.day7.part2;
 
-import util.FileReader;
+import util.io.FileReader;
 
 import java.util.HashMap;
 import java.util.Map;

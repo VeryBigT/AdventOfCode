@@ -1,5 +1,7 @@
 package year2023.day3.part1;
 
+import util.io.FileReader;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -10,7 +12,7 @@ public class ScematicAnalyser {
 
     public static void main(String[] args) {
         int result = 0;
-        List<String> input = util.FileReader.readFile("src/year2023/day3/input.txt");
+        List<String> input = FileReader.readFile("src/year2023/day3/input.txt");
         char[][] data = new char[input.size()][];
         for(int i = 0; i < input.size(); ++i) {
             data[i] = input.get(i).toCharArray();

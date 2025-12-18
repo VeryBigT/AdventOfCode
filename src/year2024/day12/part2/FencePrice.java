@@ -1,7 +1,7 @@
 package year2024.day12.part2;
 
-import util.FileReader;
-import util.ListMap;
+import util.io.FileReader;
+import util.collection.ListMap;
 import util.Pos;
 import util.Range;
 

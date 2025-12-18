@@ -1,6 +1,6 @@
 package year2025.day4.part2;
 
-import util.FileReader;
+import util.io.FileReader;
 import util.Pos;
 
 public class ForkLifts {

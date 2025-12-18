@@ -1,8 +1,7 @@
 package year2025.day1.part2;
 
-import util.FileReader;
+import util.io.FileReader;
 import util.MathUtil;
-import util.Pos;
 
 import java.util.List;
 
