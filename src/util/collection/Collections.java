@@ -22,7 +22,8 @@ public abstract class Collections {
      * @param <E> the type of the elements
      */
     public static <E> boolean hasIntersection(Collection<E> col1, Collection<E> col2) {
-        return col1.stream().anyMatch(col2::contains);
+        return col1.stream()
+                .anyMatch(col2::contains);
     }
 
     public static <E> boolean hasMatchingElements(Collection<E> col1, Collection<E> col2) {
@@ -50,7 +51,9 @@ public abstract class Collections {
      * @param <E> the type of the elements
      */
     public static <E> Set<E> intersection(Collection<E> col1, Collection<E> col2) {
-        return col1.stream().filter(col2::contains).collect(Collectors.toSet());
+        return col1.stream()
+                .filter(col2::contains)
+                .collect(Collectors.toSet());
     }
 
     public static <E> void reduce(Collection<Set<E>> col) {
