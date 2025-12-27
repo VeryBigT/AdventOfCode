@@ -29,7 +29,7 @@ public class Connections {
                 .forEach(pair -> {
                     Set<Integer> set = setOf(pair.left(), pair.right());
                     for(Set<Integer> circuit: circuits) {
-                        if(containsAny(set, circuit)) {
+                        if(hasIntersection(set, circuit)) {
                             circuit.addAll(set);
                             return;
                         }

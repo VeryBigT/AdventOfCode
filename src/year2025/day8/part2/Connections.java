@@ -15,25 +15,25 @@ public class Connections {
         Pos3D[] positions = Arrays.stream(input)
                 .map(Pos3D::new)
                 .toArray(Pos3D[]::new);
-        List<Pair<Pair<Integer,Integer>,Double>> list = new ArrayList<>();
+        List<Pair<Pair<Integer,Integer>,Double>> connections = new ArrayList<>();
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < i; j++) {
                 double distance = positions[i].distance(positions[j]);
-                list.add(new Pair<>(new Pair<>(i, j), distance));
+                connections.add(new Pair<>(new Pair<>(i, j), distance));
             }
         }
-        list.sort(Comparator.comparingDouble(Pair::right));
+        connections.sort(Comparator.comparingDouble(Pair::right));
         List<Set<Integer>> circuits = new ArrayList<>();
-        int n = 0;
-        long result;
-        do {
-            var connection = list.get(n++);
-            int i = connection.left().left();
-            int j = connection.left().right();
-            result = (long) positions[i].x() * (long) positions[j].x();
+        int i = 0, j = 0;
+        for (var connection : connections) {
+            i = connection.left().left();
+            j = connection.left().right();
             circuits.add(setOf(i, j));
             reduce(circuits);
-        } while (!(circuits.size() == 1 && circuits.get(0).size() == size));
+            if (circuits.size() == 1 && circuits.get(0).size() == size)
+                break;
+        }
+        long result = (long) positions[i].x() * (long) positions[j].x();
         System.out.println(result);
     }
 }

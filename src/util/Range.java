@@ -1,6 +1,5 @@
 package util;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
@@ -13,7 +12,7 @@ public class Range implements Comparable<Range> {
         this.end = end;
     }
 
-    public static Collection<Range> combine(@NotNull Collection<Range> ranges) {
+    public static Collection<Range> combine(Collection<Range> ranges) {
         Set<Range> result = new HashSet<>();
         boolean hasUnions = false;
         for(Range range1 : ranges) {
@@ -37,7 +36,7 @@ public class Range implements Comparable<Range> {
         return result;
     }
 
-    public static Collection<Range> without(@NotNull Collection<Range> ranges, Range o) {
+    public static Collection<Range> without(Collection<Range> ranges, Range o) {
         Collection<Range> result = new ArrayList<>();
         for(Range range : ranges) {
             if(range.overlaps(o)) {
@@ -61,7 +60,7 @@ public class Range implements Comparable<Range> {
         return result;
     }
 
-    public boolean overlaps(@NotNull Range o) {
+    public boolean overlaps(Range o) {
         return Math.max(this.start, o.start) <= Math.min(this.end, o.end);
     }
 
@@ -111,7 +110,7 @@ public class Range implements Comparable<Range> {
     }
 
     @Override
-    public int compareTo(@NotNull Range o) {
+    public int compareTo(Range o) {
         return this.start - o.start < 0 ? -1 : 1;
     }
 
@@ -131,7 +130,7 @@ public class Range implements Comparable<Range> {
         return start <= value && end >= value;
     }
 
-    public static boolean contains(@NotNull Collection<Range> ranges, long value) {
+    public static boolean contains(Collection<Range> ranges, long value) {
         return ranges.stream().anyMatch(r -> r.contains(value));
     }
 
